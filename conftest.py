@@ -2,6 +2,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
+
 def pytest_addoption(parser): # получение парметров из командной строки
     parser.addoption('--browser_name', action='store', default='yandex', \
                      help="Выберете браузер: chrome, yandex or firefox")
