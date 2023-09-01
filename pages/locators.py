@@ -1,5 +1,8 @@
 from selenium.webdriver.common.by import By
 
+class BasePageLocators():
+
+
 class MainPageLocators():
     LOGIN_LINK=(By.CSS_SELECTOR, "#login_link")
 
@@ -12,4 +15,4 @@ class ProductPageLocators():
     MES_SUCCESS_ADD_TO_BASKET=(By.XPATH, '//div[@id="messages"]/div[1]//strong')
     MES_SUM_BASKET=(By.XPATH, '//div[@id="messages"]/div[3]//strong')
     BOOK_PRICE=(By.CSS_SELECTOR, '[class="price_color"]')
-    BOOK_NAME=(By.CSS_SELECTOR, ".col-sm-6 h1")
+    BOOK_NAME=(By.CSS_SELECTOR, ".col-sm-6 h1") 
