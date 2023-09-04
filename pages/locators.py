@@ -1,13 +1,15 @@
 from selenium.webdriver.common.by import By
 
 class BasePageLocators():
-
-
-class MainPageLocators():
     LOGIN_LINK=(By.CSS_SELECTOR, "#login_link")
+    BASKET_LINK=(By.XPATH, '//a[contains(text(), "basket")]')
+
+class BasketPageLocators():
+    MES_EMPTY_BASKET=(By.CSS_SELECTOR, '#content_inner p')
+    BASKET_HEADER_TEXT=(By.CSS_SELECTOR, '.page-header.action h1')
 
 class LoginPageLocators():
-    LOGIN_FORM=(By.CSS_SELECTOR, "#login_form")
+    LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
 
 class ProductPageLocators():
