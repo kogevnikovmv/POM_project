@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.options import Options
 
 
 def pytest_addoption(parser): # получение парметров из командной строки
-    parser.addoption('--browser_name', action='store', default='yandex',
+    parser.addoption('--browser_name', action='store', default='chrome',
                      help="Выберете браузер: chrome, yandex or firefox")
     parser.addoption('--language', action='store', default="en",
                      help="Choose language, my friend")
