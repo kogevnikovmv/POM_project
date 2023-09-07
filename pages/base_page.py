@@ -23,6 +23,10 @@ class BasePage():
         login_link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         login_link.click()
 
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"
+
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link not found"
 
@@ -51,7 +55,9 @@ class BasePage():
             return False
         return True
 
-
+# это функция требуется если на конце ссылки есть ?promo=offer, т.к. после добавления товара в корзину
+# нужно будет написать ответ в всплывающем окне. Собственно эта функция высчитывает правильный ответ
+# и вставляет его в всплывающее окно.
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
         x = alert.text.split(" ")[2]
