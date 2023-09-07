@@ -7,6 +7,7 @@ class BasePageLocators():
 class BasketPageLocators():
     MES_EMPTY_BASKET=(By.CSS_SELECTOR, '#content_inner p')
     BASKET_HEADER_TEXT=(By.CSS_SELECTOR, '.page-header.action h1')
+    BASKET_ADDED_ITEMS=(By.CSS_SELECTOR, ".basket-items")
 
 class LoginPageLocators():
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
